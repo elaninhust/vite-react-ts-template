@@ -36,10 +36,7 @@
   },
   "lint-staged": {
     "./**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}": [
-      "prettier . --write \"./**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}\" --config .prettierrc.cjs"
-    ],
-    "./**/*.{cjs,mjs,ts,tsx,cts,mts}": [
-      "eslint . --ext .cjs,.mjs,.ts,.tsx,.cts,.mts --quiet --fix --max-warnings=0 --ignore-path .gitignore"
+      "npm run lint"
     ]
   }
 }
