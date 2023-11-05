@@ -6,10 +6,36 @@
 
 增加的功能如下：
 
+**main** 分支
+
 - [x] eslint
 - [x] prettier
 - [x] husky
 - [x] lint-staged
+- [ ] commitlint
+- [ ] commitizen
+
+**eslint-tailwindcss** 分支
+
+使用 `eslint-plugin-tailwindcss` 来检查 `tailwindcss`
+
+- [x] eslint
+- [x] prettier
+- [x] husky
+- [x] lint-staged
+- [x] tailwindcss
+- [ ] commitlint
+- [ ] commitizen
+
+**prettier-tailwindcss** 分支
+
+使用官方推出的 `prettier-plugin-tailwindcss` 来检查 `tailwindcss`
+
+- [x] eslint
+- [x] prettier
+- [x] husky
+- [x] lint-staged
+- [x] tailwindcss
 - [ ] commitlint
 - [ ] commitizen
 
