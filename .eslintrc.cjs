@@ -10,6 +10,7 @@ module.exports = {
      * 整合 eslint-config-prettier 和 eslint-plugin-prettier ，且确保这一行是数组的最后一个元素
      * 1. eslint-config-prettier: 禁用掉了一些不必要的以及和 Prettier 相冲突的 ESLint 规则
      * 2. eslint-plugin-prettier: 将 prettier 作为 ESLint 的规则来使用，相当于代码不符合 Prettier 的标准时，会报一个 ESLint 错误，同时也可以通过 eslint --fix 来进行格式化
+     * 参考：https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
      */
     'plugin:prettier/recommended',
   ],
