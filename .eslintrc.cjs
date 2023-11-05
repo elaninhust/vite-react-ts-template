@@ -12,6 +12,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended', // 检测 React 相关的语法和最佳实践
     'plugin:react-hooks/recommended', // 检测 Hooks 的使用是否符合最佳实践
+    'plugin:tailwindcss/recommended',
     /**
      * 整合 eslint-config-prettier 和 eslint-plugin-prettier ，且确保这一行是数组的最后一个元素
      * 1. eslint-config-prettier: 禁用掉了一些不必要的以及和 Prettier 相冲突的 ESLint 规则
