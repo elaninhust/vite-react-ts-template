@@ -1,12 +1,12 @@
 {
   "name": "vite-react-ts-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint:fix": "eslint . --ext .cjs,.mjs,.ts,.tsx,.cts,.mts --quiet --fix --max-warnings=0 --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .cjs,.mjs,.ts,.tsx,.cts,.mts, --quiet --fix --max-warnings=0 --ignore-path .gitignore",
     "lint:format": "prettier . --write \"./**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}\" --config .prettierrc.cjs",
     "lint": "npm run lint:format && npm run lint:fix ",
     "preview": "vite preview",
@@ -35,8 +35,11 @@
     "vite": "^4.4.5"
   },
   "lint-staged": {
-    "./**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}": [
+    "./**/*.{cjs,mjs,ts,tsx,cts,mts}": [
       "npm run lint"
+    ],
+    "./**/*{.md,css,json}": [
+      "npm run lint:format"
     ]
   }
 }
