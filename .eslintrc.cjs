@@ -1,6 +1,12 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
+  // 解决 Warning: React version not specified in eslint-plugin-react settings
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
