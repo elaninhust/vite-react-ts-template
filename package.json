@@ -35,11 +35,11 @@
     "vite": "^4.4.5"
   },
   "lint-staged": {
-    "src/**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}": [
+    "./**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}": [
       "npm run lint:format"
     ],
-  "src/**/*.{cjs,mjs,ts,tsx,cts,mts}": [
-    "npm run lint:fix"
-  ]
+    "./**/*.{cjs,mjs,ts,tsx,cts,mts}": [
+      "npm run lint:fix"
+    ]
   }
 }
