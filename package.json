@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --ignore-path ./.gitignore",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
     "lint:format": "prettier --log-level log --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc.cjs",
     "lint": "npm run lint:format && npm run lint:fix ",
     "preview": "vite preview",
