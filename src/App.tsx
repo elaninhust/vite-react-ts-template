@@ -18,7 +18,7 @@ function App() {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a
-          className="inline-block p-4 pt-2"
+          className="inline-block pt-2 p-4 "
           href="https://react.dev"
           target="_blank"
           rel="noreferrer"

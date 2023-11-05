@@ -33,17 +33,13 @@
     "lint-staged": "^15.0.2",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
   "lint-staged": {
     "./**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}": [
-      "prettier . --write \"./**/*.{cjs,mjs,ts,tsx,cts,mts,css,md,json}\" --config .prettierrc.cjs"
-    ],
-    "./**/*.{cjs,mjs,ts,tsx,cts,mts}": [
-      "eslint . --ext .cjs,.mjs,.ts,.tsx,.cts,.mts  --quiet --fix --ignore-path .gitignore"
+      "npm run lint"
     ]
   }
 }
