@@ -36,6 +36,6 @@
     // https://www.typescriptlang.org/tsconfig#typeRoots
     // "typeRoots": []
   },
-  "include": ["src"],
+  "include": ["src", "utils"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
