@@ -11,6 +11,7 @@
   "include": [
     "vite.config.ts",
     "manifest.ts",
+    "manifest.config.ts",
     "package.json",
     "utils/plugins",
     "utils/manifest-parser",

@@ -8,6 +8,10 @@ import customDynamicImport from './utils/plugins/custom-dynamic-import';
 import addHmr from './utils/plugins/add-hmr';
 import watchRebuild from './utils/plugins/watch-rebuild';
 
+import manifestConfig from './manifest.config';
+
+import type { InputOption } from 'rollup';
+
 const rootDir = resolve(__dirname);
 const srcDir = resolve(rootDir, 'src');
 const pagesDir = resolve(srcDir, 'pages');
@@ -52,16 +56,7 @@ export default defineConfig({
     modulePreload: false,
     reportCompressedSize: isProduction,
     rollupOptions: {
-      input: {
-        devtools: resolve(pagesDir, 'devtools', 'index.html'),
-        panel: resolve(pagesDir, 'panel', 'index.html'),
-        content: resolve(pagesDir, 'content', 'index.ts'),
-        background: resolve(pagesDir, 'background', 'index.ts'),
-        contentStyle: resolve(pagesDir, 'content', 'style.pcss'),
-        popup: resolve(pagesDir, 'popup', 'index.html'),
-        newtab: resolve(pagesDir, 'newtab', 'index.html'),
-        options: resolve(pagesDir, 'options', 'index.html'),
-      },
+      input: generateRollupInputOptions(manifestConfig),
       output: {
         entryFileNames: 'src/pages/[name]/index.js',
         chunkFileNames: isDev
@@ -84,6 +79,40 @@ export default defineConfig({
     },
   },
 });
+
+function generateRollupInputOptions(
+  config: typeof manifestConfig,
+): InputOption {
+  const input: InputOption = {};
+
+  if (config.background) {
+    input.background = resolve(pagesDir, 'background', 'index.ts');
+  }
+
+  if (config.content) {
+    input.content = resolve(pagesDir, 'content', 'index.ts');
+    input.contentStyle = resolve(pagesDir, 'content', 'style.pcss');
+  }
+
+  if (config.devtools) {
+    input.devtools = resolve(pagesDir, 'devtools', 'index.html');
+    input.panel = resolve(pagesDir, 'panel', 'index.html');
+  }
+
+  if (config.newtab) {
+    input.newtab = resolve(pagesDir, 'newtab', 'index.html');
+  }
+
+  if (config.options) {
+    input.options = resolve(pagesDir, 'options', 'index.html');
+  }
+
+  if (config.popup) {
+    input.popup = resolve(pagesDir, 'popup', 'index.html');
+  }
+
+  return input;
+}
 
 function firstUpperCase(str: string) {
   const firstAlphabet = new RegExp(/( |^)[a-z]/, 'g');
