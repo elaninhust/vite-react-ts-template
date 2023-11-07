@@ -5,5 +5,9 @@ export default function App() {
     console.log('content view loaded');
   }, []);
 
-  return <div className="">content view</div>;
+  return (
+    <div className="content-view-style-may-be-not-working crx-class">
+      content view
+    </div>
+  );
 }

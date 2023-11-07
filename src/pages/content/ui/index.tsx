@@ -12,8 +12,9 @@ document.body.append(root);
 const rootIntoShadow = document.createElement('div');
 rootIntoShadow.id = 'shadow-root';
 
-const shadowRoot = root.attachShadow({ mode: 'open' });
-shadowRoot.appendChild(rootIntoShadow);
+// const shadowRoot = root.attachShadow({ mode: 'open' });
+// shadowRoot.appendChild(rootIntoShadow);
+root.appendChild(rootIntoShadow);
 
 /**
  * https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite/pull/174

@@ -71,11 +71,13 @@ export default defineConfig({
           const { dir, name: _name } = path.parse(assetInfo.name);
           const assetFolder = dir.split('/').at(-1);
           const name = assetFolder + firstUpperCase(_name);
-          console.log(111, dir, _name, name, assetInfo.name, assetInfo.type);
 
           if (name === 'Style') {
+            // 专门处理 contentStyle
             return `assets/css/contentStyle${cacheInvalidationKey}.chunk.css`;
           }
+
+          // 其他资源
           return `assets/[ext]/${name}.chunk.[ext]`;
         },
       },
