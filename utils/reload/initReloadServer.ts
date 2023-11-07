@@ -46,7 +46,7 @@ const debounceSrc = debounce(function (path: string) {
   );
   // Delay waiting for public assets to be copied
 }, 400);
-chokidar.watch('src').on('all', (event, path) => debounceSrc(path));
+chokidar.watch('src').on('all', (_, path) => debounceSrc(path));
 
 /** CHECK:: build was completed **/
 const debounceDist = debounce(() => {
