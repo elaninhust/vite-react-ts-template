@@ -16,6 +16,7 @@ const rootDir = resolve(__dirname);
 const srcDir = resolve(rootDir, 'src');
 const pagesDir = resolve(srcDir, 'pages');
 const assetsDir = resolve(srcDir, 'assets');
+const sharedDir = resolve(srcDir, 'shared');
 const outDir = resolve(rootDir, 'dist');
 const publicDir = resolve(rootDir, 'public');
 
@@ -32,6 +33,7 @@ export default defineConfig({
       '@src': srcDir,
       '@pages': pagesDir,
       '@assets': assetsDir,
+      '@shared': sharedDir,
     },
   },
   plugins: [
