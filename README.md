@@ -39,6 +39,10 @@
 - [ ] commitlint
 - [ ] commitizen
 
+**chrome-extension** 分支
+
+借鉴 [chrome-extension-boilerplate-react-vite](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite) 的方案，综合配置后完成
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
